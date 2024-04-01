@@ -1,5 +1,8 @@
 # Python text menu
-Python module for interacting with the user through console
+Python module for interacting with the user through console, to install module from pip execute:
+```bash
+pip install python_text_menu
+```
 
 ## Simple use
 ```python

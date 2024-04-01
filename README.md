@@ -3,6 +3,8 @@ Python module for interacting with the user through console
 
 ## Simple use
 ```python
+from python_text_menu import print_menu
+
 options = ['Option 1', 'Option 2', 'Option 3']
 choice = print_menu(options)
 ```

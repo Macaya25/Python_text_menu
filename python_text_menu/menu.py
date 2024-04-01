@@ -1,4 +1,3 @@
-
 def print_menu(options: list, sep=None, title='Menu', input_text='Select an option: ') -> str:
     """
     Parameters
@@ -21,9 +20,12 @@ def print_menu(options: list, sep=None, title='Menu', input_text='Select an opti
     print(f'[{len(options)+1}] Exit')
     try:
         choice = input(f'{input_text}')
-        while choice not in str(range(1, len(options) + 1)):
+        while True:
+            if choice.isdigit():
+                choice = int(choice)
+                if choice in range(1, len(options) + 2):
+                    return choice
             choice = input('Select a valid option: ')
     except KeyboardInterrupt:
+        print()
         return len(options) + 1
-
-    return choice

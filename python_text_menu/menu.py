@@ -18,7 +18,7 @@ def print_menu(options: list, sep=None, title='Menu', input_text='Select an opti
         print(sep)
     for indx, o in enumerate(options):
         print(f'[{indx + 1}] {o}')
-    print(f'[{len(options)+1}] Back')
+    print(f'[{len(options)+1}] Exit')
     try:
         choice = input(f'{input_text}')
         while choice not in str(range(1, len(options) + 1)):
@@ -27,8 +27,3 @@ def print_menu(options: list, sep=None, title='Menu', input_text='Select an opti
         return len(options) + 1
 
     return choice
-
-
-option = print_menu(['Option 1', 'Option 2', 'Option 3'])
-
-print('Final: ', option)
